@@ -12,6 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "vueify": "^9.4.1",
+    "vueify-babel-7-support": "^1.0.2"
   }
 }
