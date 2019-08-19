@@ -1,0 +1,17 @@
+{
+  "name": "Lesson7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify \"example 1/script.js\" -o \"example 1/bundle.js\" -v",
+    "build": "browserify \"example 1/script.js\" -o \"example 1/bundle.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
