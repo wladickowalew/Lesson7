@@ -8,9 +8,16 @@
 <template>
 	<div>
 		<p>{{pText.toUpperCase()}}</p>
+		<p><input type="text" v-bind:value="pText" 
+								v-on:input="send"></p>
 	</div>
 </template>
 
 <script>
-	module.exports = {props: ["pText"]};
+	module.exports = {props: ["pText"],
+					  methods:{
+					  	send: function(event){
+					  		this.$emit("update",event.target.value);
+					  	}
+					  }};
 </script>
