@@ -1,15 +1,16 @@
 <template>
-	<button type="button" v-on:click = "reduce">{{number}}</button>
+	<button type="button" v-on:click = "reduce">{{referenced.value}}</button>
 </template>
 
 <script>
+	let globals = require("./global.js")
 	module.exports = {
 		data: function(){
-			return {number: 0};
+			return {referenced: globals};
 		},
 		methods:{
 			reduce: function(){
-				this.number += 1;
+				this.referenced.value -= 1;
 			}
 		}
 	};

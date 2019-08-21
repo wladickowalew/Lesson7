@@ -1,15 +1,16 @@
 <template>
-	<h1 v-on:mousemove = "enlarge">{{number}}</h1>
+	<h1 v-on:mousemove = "enlarge">{{referenced.value}}</h1>
 </template>
 
 <script>
+	let globals = require("./global.js")
 	module.exports = {
 		data: function(){
-			return {number: 0};
+			return {referenced: globals};
 		},
 		methods:{
 			enlarge: function(){
-				this.number += 1;
+				this.referenced.value += 1;
 			}
 		}
 	};
